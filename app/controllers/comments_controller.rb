@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
-	before_action authenticate_user!
-
+	before_action :authenticate_user!
 	def create
 		@post = Post.find(params[:post_id])
 		@comment = Comment.create(params[:comment].permit(:content))
@@ -9,8 +8,8 @@ class CommentsController < ApplicationController
 
 		if @comment.save
 			redirect_to post_path(@post)
-		else 
+		else
 			render 'new'
 		end
-	end 
+	end
 end
