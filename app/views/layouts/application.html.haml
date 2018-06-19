@@ -1,25 +1,12 @@
 !!!
 %html 
 %head 
-  %title Muse 
-  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
-  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+  %title Muse
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tag 
+%body 
+  %p.notice= notice 
+  %p.alert= alert
 
-
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Muse</title>
-    <%= csrf_meta_tags %>
-
-  </head>
-
-  <body>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
-</html>
+  =yield 
