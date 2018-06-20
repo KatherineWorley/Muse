@@ -10,7 +10,7 @@
 %body 
   %header 
     .wrapper.clearfix
-      #logo= link_to "muse", root_path
+      #logo= link_to "Muse", root_path
       %nav
         - if user_signed_in?
           = link_to current_user.name, edit_user_registration_path
