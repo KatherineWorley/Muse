@@ -1,15 +1,70 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
  *= require_self
  */
+
+body {
+	font-family: "Proxima Nova";
+	font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+}
+
+.wrapper {
+	width: 80%;
+	margin; 0 auto;
+}
+
+.clearfix;before, .clearfix;after {
+	content: " ";
+	display: table;
+}
+
+.clearfix;after {
+	clear: both;
+}
+
+.button {
+	border: 1px solid #989898;
+	padding: .7rem 1.25rem;
+	border-radius: .3rem;
+	outline: none;
+	background: white;
+	color: #989898;
+}
+
+header {
+	width: 100%;
+	padding: 2rem 0;
+	border-bottom: 1px solid #E4E4E4;
+	#logo {
+		float: left;
+		font-size: 1.75rem;
+		a {
+			color: #333233;
+			text-decoration: none;
+			&:hover {
+				color: #50a7c7;
+			}
+		}
+	}
+	nav {
+		float: right;
+		a {
+			margin-left: 1.5rem;
+			line-height: 2;
+			color: #989898;
+			text-decoration: none;
+			&:hover {
+				color: #50a7c7;
+			}
+		}
+	}
+}
+
+@import 'home.css.scss'; 
+@import 'post.css.scss';
+
+
+
