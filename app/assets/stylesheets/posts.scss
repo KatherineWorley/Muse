@@ -1,3 +1,17 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#post_show {
+	padding-top: 2rem;
+	.post_image_description {
+		width: 50%;
+		float: left;
+		margin-right: 5%;
+	}
+	.post_data {
+		width: 15%;
+		float: left;
+		.button {
+			width: 100%;
+			display: inline-block;
+			padding 
+		}
+	}
+}
