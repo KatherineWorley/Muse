@@ -11,7 +11,47 @@
 #posts {
 	.post {
 		background: #f8f9fa;
-		
-
+		width: 30%;
+		float: left;
+		margin: 1rem 1.5%;
+		border: 1px solid #e4e4e4;
+		.post_image {
+			height: 200px;
+			overflow: hidden;
+			img {
+				width: 100%;
+				border-radius: .3rem .3rem 0 0;
+			}
+		}
+		.post_content {
+			h2 {
+				margin: 0;
+				font-weight: 100;
+				padding: 1rem 5%;
+				border-bottom: 1px solid #e4e4e4;
+				font-size: 1.25rem;
+				a {
+					text-decoration: none;
+					color: #50a7c7;
+				}
+			}
+		}
+		.data {
+			padding: .75rem 5%;
+			color: $969696;
+			.username, .buttons {
+				margin: 0;
+				font-size: .8rem;
+			}
+			.username {
+				float: left;
+			}
+			.buttons {
+				float: right;
+				span {
+					margin-left: .5rem; 
+				}
+			}
+		}
 	}
 }
