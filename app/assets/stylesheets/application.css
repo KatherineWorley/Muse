@@ -13,25 +13,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper {
 	width: 80%;
-	margin; 0 auto;
+	margin: 0 auto;
 }
 
-.clearfix;before, .clearfix;after {
+.clearfix:before, .clearfix:after {
 	content: " ";
 	display: table;
 }
 
-.clearfix;after {
+.clearfix:after {
 	clear: both;
 }
 
 .button {
-	border: 1px solid #989898;
+	border: 1px solid #9B9B9B;
 	padding: .7rem 1.25rem;
 	border-radius: .3rem;
 	outline: none;
 	background: white;
-	color: #989898;
+	color: #9B9B9B;
 }
 
 header {
@@ -45,7 +45,7 @@ header {
 			color: #333233;
 			text-decoration: none;
 			&:hover {
-				color: #50a7c7;
+				color: #50A7C7;
 			}
 		}
 	}
@@ -54,17 +54,14 @@ header {
 		a {
 			margin-left: 1.5rem;
 			line-height: 2;
-			color: #989898;
+			color: #9B9B9B;
 			text-decoration: none;
 			&:hover {
-				color: #50a7c7;
+				color: #50A7C7;
 			}
 		}
 	}
 }
 
-@import 'home.css.scss'; 
+@import 'home.css.scss';
 @import 'post.css.scss';
-
-
-
