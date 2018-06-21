@@ -23,9 +23,6 @@
 			- if @post.user == current_user
 				= link_to "Edit", edit_post_path(@post), class: "data"
 				= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
-		
-
-		
 
 #comments
 	%h2.comment_count= pluralize(@post.comments.count, "Comment")
