@@ -1,3 +1,11 @@
+#post_show
+	%h1= @post.title 
+	%p.username 
+		Share by
+		= @post.user.name 
+		about 
+		= time_ago_in_words(@post.created_at)
+
 = image_tag @post.image.url(:medium)
 %h1= @post.title 
 %p= @post.link
