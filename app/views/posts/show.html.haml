@@ -5,6 +5,10 @@
 		= @post.user.name 
 		about 
 		= time_ago_in_words(@post.created_at)
+	.clearfix 
+		.post_image_description
+			= image_tag @post.image.url(:medium)
+				.description= simple_format(@post.description)
 
 = image_tag @post.image.url(:medium)
 %h1= @post.title 
