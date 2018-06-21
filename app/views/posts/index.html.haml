@@ -1,3 +1,17 @@
+- if user_signed_in?
+	%p#intro
+		Hello 
+		= current_user.name
+		%br/
+		%span 
+			Share your inspiration and see what is inspring others. 
+- else 
+	%p#intro 
+		What is your muse? 
+		%br/
+		%span 
+			Share your inspiration and see what is inspring others. 
+
 - @posts.each do |post|
 	= link_to (image_tag post.image.url(:small)), post 
 	%h2= link_to post.title, post 
