@@ -47,10 +47,10 @@ class PostsController < ApplicationController
 		redirect_back fallback_location: root_path
 	end
 
-	def destroy 
+	def destroy
 		@post.destroy
 		redirect_to root_path
-	end 
+	end
 
 
 	private 
