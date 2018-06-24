@@ -9,42 +9,32 @@ class PostsController < ApplicationController
 	def show
 		@comments = Comment.where(post_id: @post)
 		@random_post = Post.where.not(id: @post).order("RANDOM()").first
+
 	end
 
 	def new
 		@post = current_user.posts.build
 	end
 
-	def create 
+	def create
 		@post = current_user.posts.build(post_params)
 
-		if @post.save 
-			redirect_to @post 
-		else 
+		if @post.save
+			redirect_to @post
+		else
 			render 'new'
 		end
-	end 
+	end
 
-	def edit 
-		
-	end 
+	def edit
+	end
 
 	def update
 		if @post.update(post_params)
 			redirect_to @post
-		else 
+		else
 			render 'edit'
-		end 
-	end 
-
-	def upvote
-		@post.upvote_by current_user
-		redirect_back fallback_location: root_path
-	end
-
-	def downvote
-		@post.downvote_from current_user
-		redirect_back fallback_location: root_path
+		end
 	end
 
 	def destroy
@@ -52,8 +42,17 @@ class PostsController < ApplicationController
 		redirect_to root_path
 	end
 
+	def upvote
+		@post.upvote_by current_user
+		redirect_to :back
+	end
 
-	private 
+	def downvote
+		@post.downvote_from current_user
+		redirect_to :back
+	end
+
+	private
 
 	def find_post
 		@post = Post.find(params[:id])
@@ -61,5 +60,5 @@ class PostsController < ApplicationController
 
 	def post_params
 		params.require(:post).permit(:title, :link, :description, :image)
-	end 
+	end
 end
